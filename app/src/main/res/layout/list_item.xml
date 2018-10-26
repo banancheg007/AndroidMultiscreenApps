@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="16dp"
     android:minHeight="@dimen/list_item_height"
     android:background="@color/tan_background">
 
@@ -19,8 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingLeft="16dp"
-        android:background="@color/category_numbers">
+        android:paddingLeft="16dp">
         <TextView
             android:id="@+id/miwok_text_view"
             android:layout_width="match_parent"
