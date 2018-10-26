@@ -33,7 +33,7 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
-        ArrayList<Word> words = new ArrayList<Word>();
+        final  ArrayList<Word> words = new ArrayList<Word>();
         /*words.add("one");
         words.add("two");
         words.add("three");
@@ -63,7 +63,8 @@ public class NumbersActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    mMediaPlayer = MediaPlayer.create(NumbersActivity.this,R.raw.number_one);
+                    Word word = words.get(position);
+                    mMediaPlayer = MediaPlayer.create(NumbersActivity.this,word.getmAudioResourceId());
                     mMediaPlayer.start();
             }
         });
