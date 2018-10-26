@@ -3,19 +3,22 @@ package com.example.banancheg.androidmultiscreenapps;
 public class Word {
     private String mDefaultTranslation;
     private String mMiwokTranslation;
+    private int mAudioResourceId;
     private int mImageResourceId = NO_IMAGE_PROVIDED;
 
     private static final int NO_IMAGE_PROVIDED = -1;
 
-    public Word(String defaultTranslation, String miwokTranslation){
+    public Word(String defaultTranslation, String miwokTranslation, int audioResourceId){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mAudioResourceId = audioResourceId;
     }
 
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId){
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId, int audioResourceId){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageResourceId = imageResourceId;
+        mAudioResourceId = audioResourceId;
     }
 
     public int getmImageResourceId(){
@@ -32,5 +35,9 @@ public class Word {
 
     public boolean hasImage(){
         return mImageResourceId != NO_IMAGE_PROVIDED;
+    }
+
+    public int getmAudioResourceId(){
+        return mAudioResourceId;
     }
 }
