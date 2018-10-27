@@ -15,6 +15,7 @@
  */
 package com.example.banancheg.androidmultiscreenapps;
 
+import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -53,7 +54,7 @@ public class PhrasesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
-
+        mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         final ArrayList<Word> words = new ArrayList<Word>();
 
         words.add(new Word("Where are you going?", "minto wuksus", R.raw.phrase_where_are_you_going));
