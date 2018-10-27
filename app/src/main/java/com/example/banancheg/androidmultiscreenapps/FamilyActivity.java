@@ -100,6 +100,7 @@ public class FamilyActivity extends AppCompatActivity {
         if(mMediaPlayer != null){
             mMediaPlayer.release();
             mMediaPlayer = null;
+            mAudioManager.abandonAudioFocus(mOnAudioFocusChangeListener);
         }
     }
 }

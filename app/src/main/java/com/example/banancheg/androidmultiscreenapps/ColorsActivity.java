@@ -98,6 +98,7 @@ public class ColorsActivity extends AppCompatActivity {
         if(mMediaPlayer != null){
             mMediaPlayer.release();
             mMediaPlayer = null;
+            mAudioManager.abandonAudioFocus(mOnAudioFocusChangeListener);
         }
     }
 }
